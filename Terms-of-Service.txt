@@ -1,0 +1,32 @@
+Terms of Service
+
+Effective Date: 2024
+
+Welcome to Remote Job . By accessing or using our application , you agree to comply with and be bound by these Terms of Service (“Terms”). If you do not agree with these Terms, please do not use our App.
+
+1. Acceptance of Terms
+By using the App, you affirm that you are at least 18 years old and have the legal capacity to enter into these Terms.
+
+2. Use of the App
+    Job Listings: Our App provides a list of remote job opportunities sourced from public APIs. We do not endorse or guarantee the accuracy, quality, or availability of any job listings.
+    No Registration Required: You do not need to create an account or log in to access the job listings.
+
+3. User Responsibilities
+    You are responsible for your use of the App and for any content you access or submit.
+    You agree not to use the App for any unlawful purpose or in a way that could damage, disable, overburden, or impair the App.
+
+4. Third-Party Links
+Our App may contain links to third-party websites or services that are not owned or controlled by us. We have no control over and assume no responsibility for the content, privacy policies, or practices of any third-party sites or services. We encourage you to review the terms and privacy policies of any third-party sites you visit.
+
+5. Disclaimers
+    The job listings provided in our App are for informational purposes only. We do not guarantee the availability, accuracy, or reliability of any job postings.
+    We are not responsible for any decisions made based on the information provided in the App.
+
+6. Limitation of Liability
+To the fullest extent permitted by law, Remote Job shall not be liable for any direct, indirect, incidental, special, consequential, or punitive damages arising from your use of or inability to use the App, even if we have been advised of the possibility of such damages.
+
+7. Indemnification
+You agree to indemnify, defend, and hold harmless Remote Job, its affiliates, and their respective officers, directors, employees, and agents from and against any claims, liabilities, damages, losses, costs, or expenses arising from your use of the App or your violation of these Terms.
+
+8. Changes to These Terms
+We reserve the right to modify these Terms at any time. Any changes will be effective immediately upon posting the revised Terms in the App. Your continued use of the App after any changes constitutes your acceptance of the new Terms.

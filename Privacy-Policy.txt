@@ -1,0 +1,17 @@
+Privacy Policy
+
+Effective Date: 2024
+
+At Remote Job, we are committed to protecting your privacy. This Privacy Policy outlines how we use and protect your information when you visit our website [Your Website URL] and use our app that displays remote job opportunities.
+
+1. Information We Collect
+We do not collect any personal information from users. Our app uses public APIs to fetch and display job listings, and we do not require you to provide any information such as your name, email address, or any other personal details.
+
+2. Information Sharing
+We do not share or sell any personal information because we do not collect any user data.
+
+3. Data Security
+We take reasonable measures to protect the data collected through APIs. However, complete security of data transmitted over the internet cannot be guaranteed.
+
+4. Changes to This Privacy Policy
+We may update this Privacy Policy from time to time. We will post the new policy on this page and update the effective date. We encourage you to review this policy periodically.
