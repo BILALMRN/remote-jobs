@@ -1,12 +1,10 @@
-import { Image, StyleSheet, Platform, Linking, Button, ScrollView } from 'react-native';
+import { Image, StyleSheet, Platform, Linking, Button, ScrollView, View } from 'react-native';
 import { ThemedText } from '@/components/ThemedText';
-import { ThemedView } from '@/components/ThemedView';
-import CardJobDetails from '@/components/card';
+import CardJobDetails from '@/components/CardJobDetails';
 import { useRoute } from '@react-navigation/native';
-import { Card, Divider } from '@rneui/themed';
 import RenderHtml from 'react-native-render-html';
 import { Text } from 'react-native';
-import { color } from '@rneui/themed/dist/config';
+import Card from '@/components/Card';
 
 export default function JobDetail() {
   const route = useRoute();
@@ -16,27 +14,14 @@ export default function JobDetail() {
 
     <>
       <CardJobDetails job={job} />
-      {/* <Divider style={ {margin:10} }/>
-        <Button
-        title="Apply Now"
-        onPress={() => {
-          if (job.url) {
-            Linking.openURL(job.url);
-          }
-        }}
-      /> */}
-    <Divider style={{marginBottom : 10,marginTop:5}}/>
-        <ScrollView contentContainerStyle={{ padding: 2}}>
-      <Card containerStyle={{ borderRadius: 20 }} >
-          {/* <ThemedView style={styles.titleContainer}> */}
-            <ThemedText type="title" style={{ color: 'orange', alignItems: 'center' }}>desception!</ThemedText>
-
-            {/* </ThemedView> */}
-            <RenderHtml
-              contentWidth={300} // Adjust the width as needed
-              source={{ html: `${job.description}` }} // Pass the HTML content here
-            />
-
+      <View style={styles.divider} />
+      <ScrollView contentContainerStyle={{ padding: 2 }}>
+        <Card >
+          <ThemedText type="title" style={{ color: 'orange', alignItems: 'center', margin: 10 }}>desception!</ThemedText>
+          <RenderHtml
+            contentWidth={300} // Adjust the width as needed
+            source={{ html: `${job.description}` }} // Pass the HTML content here
+          />
           <Button
             title="Apply Now"
             onPress={() => {
@@ -45,15 +30,14 @@ export default function JobDetail() {
               }
             }}
           />
-      </Card>
-        </ScrollView>
+        </Card>
+      </ScrollView>
     </>
   );
 }
 
 const styles = StyleSheet.create({
   titleContainer: {
-
     alignItems: 'center',
     gap: 8,
     margin: 10,
@@ -64,6 +48,11 @@ const styles = StyleSheet.create({
     bottom: 0,
     left: 0,
     position: 'absolute',
+  },
+  divider: {
+    height: 1,
+    backgroundColor: '#ccc', // Change color as needed
+    marginVertical: 10, // Adjust spacing as needed
   },
 
 });

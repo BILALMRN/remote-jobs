@@ -1,10 +1,12 @@
 import React, { useState, useEffect } from 'react';
-import { View, Text, ActivityIndicator, FlatList, StyleSheet, TouchableOpacity, RefreshControl } from 'react-native';
+import { Text, ActivityIndicator, FlatList, TouchableOpacity, RefreshControl, useColorScheme } from 'react-native';
 import axios from 'axios';
-import CardJobDetails from '@/components/card';
+import CardJobDetails from '@/components/CardJobDetails';
 import { useNavigation } from '@react-navigation/native';
 import RNPickerSelect from 'react-native-picker-select';
 import { Collapsible } from '@/components/Collapsible';
+import { Colors } from '@/constants/Colors';
+import { ThemedView } from '@/components/ThemedView';
 
 const baseURL = 'https://remotive.com/api/remote-jobs?limit=150'; // Fetching all data once
 
@@ -15,24 +17,26 @@ const HomeScreen = () => {
   const [error, setError] = useState(null);
   const [page, setPage] = useState(1);
   const [category, setCategory] = useState(null);
-  
+
   const navigation = useNavigation();
 
   const ITEMS_PER_PAGE = 30; // Number of items to display per page
-  
+
+  let theme = useColorScheme() ?? 'light';
+  const backgroundColor = theme === 'light' ? Colors.light.background : Colors.dark.background
 
   // Fetch data from the URL once
   const fetchData = async (value = category) => {
     try {
       setLoading(true);
-      const url = value!==null ? `${baseURL}&category=${value}` : baseURL;
+      const url = value !== null ? `${baseURL}&category=${value}` : baseURL;
       const response = await axios.get(url);
       setJobs(response.data.jobs); // Store all jobs
       setDisplayedJobs(response.data.jobs.slice(0, ITEMS_PER_PAGE)); // Display the first page of jobs
       setLoading(false);
     } catch (error) {
-      setError(error);
       setLoading(false);
+      setError(error);
     }
   };
 
@@ -44,9 +48,9 @@ const HomeScreen = () => {
     setDisplayedJobs(jobs.slice(0, end)); // Load more jobs
     setPage(nextPage); // Update page number
   };
-
   useEffect(() => {
     fetchData(category); // Fetch data on component mount or when category changes
+
   }, [category]);
 
   if (loading && jobs.length === 0) return <ActivityIndicator size="large" color="#0000ff" />;
@@ -56,36 +60,39 @@ const HomeScreen = () => {
     navigation.navigate('JobDetail', { job });
   };
 
+
+
   return (
     <>
-        <Collapsible title={'Filter'}>
-      
-          <RNPickerSelect 
-            onValueChange={(value) => {
-              setCategory(value);
-              setPage(1); // Reset page when filter changes
-            }}
-            useNativeAndroidPickerStyle={false}
-            placeholder={{ label: ">>  Select job category", value: undefined }}
-            items={[
-              { label: 'Software Development', value: 'software-dev' },
-              { label: 'Customer Service', value: 'customer-support' },
-              { label: 'Design', value: 'design' },
-              { label: 'Marketing', value: 'marketing' },
-              { label: 'Sales & Business', value: 'sales-business' },
-              { label: 'Project Management', value: 'project-management' },
-              { label: 'Data Analysis', value: 'data' },
-              { label: 'DevOps & Sysadmin', value: 'devops' },
-              { label: 'Finance & Legal', value: 'finance-legal' },
-              { label: 'Human Resources', value: 'hr' },
-              { label: 'QA', value: 'qa' },
-              { label: 'Writing', value: 'writing' },
-              { label: 'Others', value: 'all-others' },
-            ]}
-          />
-        </Collapsible>
+      <Collapsible title={'Filter'}>
 
+        <RNPickerSelect
+          onValueChange={(value) => {
+            setCategory(value);
+            setPage(1); // Reset page when filter changes
+          }}
+          useNativeAndroidPickerStyle={false}
+          placeholder={{ label: ">>  Select job category", value: undefined }}
+          items={[
+            { label: 'Software Development', value: 'software-dev' },
+            { label: 'Customer Service', value: 'customer-support' },
+            { label: 'Design', value: 'design' },
+            { label: 'Marketing', value: 'marketing' },
+            { label: 'Sales & Business', value: 'sales-business' },
+            { label: 'Project Management', value: 'project-management' },
+            { label: 'Data Analysis', value: 'data' },
+            { label: 'DevOps & Sysadmin', value: 'devops' },
+            { label: 'Finance & Legal', value: 'finance-legal' },
+            { label: 'Human Resources', value: 'hr' },
+            { label: 'QA', value: 'qa' },
+            { label: 'Writing', value: 'writing' },
+            { label: 'Others', value: 'all-others' },
+          ]}
+        />
+      </Collapsible>
+      {loading && <ThemedView ><ActivityIndicator size="large" color="#0000ff" style={{ margin: 35 }} /></ThemedView>}
       <FlatList
+        style={{ backgroundColor: backgroundColor }}
         data={displayedJobs}
         keyExtractor={(item) => item.id.toString()}
         renderItem={({ item }) => (
@@ -95,10 +102,10 @@ const HomeScreen = () => {
         )}
         refreshControl={
           <RefreshControl
-              refreshing={loading}
-              onRefresh={fetchData}
+            refreshing={loading}
+            onRefresh={fetchData}
           />
-      }
+        }
         onEndReached={handleLoadMore}
         onEndReachedThreshold={0.5}
         ListFooterComponent={loading ? <ActivityIndicator size="large" /> : null}
