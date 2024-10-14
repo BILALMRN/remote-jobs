@@ -1,0 +1,568 @@
+<!--
+
+=========================================================
+* Notus Tailwind JS - v1.1.0 based on Tailwind Starter Kit by Creative Tim
+=========================================================
+
+* Product Page: https://www.creative-tim.com/product/notus-js
+* Copyright 2021 Creative Tim (https://www.creative-tim.com)
+* Licensed under MIT (https://github.com/creativetimofficial/notus-js/blob/main/LICENSE.md)
+
+* Tailwind Starter Kit Page: https://www.creative-tim.com/learning-lab/tailwind-starter-kit/presentation
+
+* Coded by Creative Tim
+
+=========================================================
+
+* The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
+
+-->
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#000000" />
+    <link rel="shortcut icon" href="../assets/img/favicon.ico" />
+    <link
+      rel="apple-touch-icon"
+      sizes="76x76"
+      href="./assets/img/apple-icon.png"
+    />
+    <link
+      rel="stylesheet"
+      href="./assets/vendor/@fortawesome/fontawesome-free/css/all.min.css"
+    />
+    <link rel="stylesheet" href="./assets/styles/tailwind.css" />
+    <title>Remote Job</title>
+  </head>
+  <body class="text-blueGray-700 antialiased">
+    <nav
+      class="top-0 fixed z-50 w-full flex flex-wrap items-center justify-between px-2 py-3 navbar-expand-lg bg-white shadow"
+    >
+      <div
+        class="container px-4 mx-auto flex flex-wrap items-center justify-between"
+      >
+        <div
+          class="w-full relative flex justify-between lg:w-auto lg:static lg:block lg:justify-start"
+        >
+          <a
+            class="text-blueGray-700 text-sm font-bold leading-relaxed inline-block mr-4 py-2 whitespace-nowrap uppercase"
+            href="./index.html"
+            >Remote Job</a
+          ><button
+            class="cursor-pointer text-xl leading-none px-3 py-1 border border-solid border-transparent rounded bg-transparent block lg:hidden outline-none focus:outline-none"
+            type="button"
+            onclick="toggleNavbar('example-collapse-navbar')"
+          >
+            <i class="fas fa-bars"></i>
+          </button>
+        </div>
+        <div
+          class="lg:flex flex-grow items-center bg-white lg:bg-opacity-0 lg:shadow-none hidden"
+          id="example-collapse-navbar"
+        >
+          <ul
+            class="flex flex-col lg:flex-row list-none lg:ml-auto items-center"
+          >
+            <li class="flex items-center">
+              <a
+                class="hover:text-blueGray-500 text-blueGray-700 px-3 py-4 lg:py-2 flex items-center text-xs uppercase font-bold"
+                href="https://github.com/BILALMRN/remote-jobs.git"
+                target="_blank"
+                ><i
+                  class="text-blueGray-400 fab fa-github text-lg leading-lg"
+                ></i
+                ><span class="lg:hidden inline-block ml-2">Star</span></a
+              >
+            </li>
+            <li class="flex items-center">
+              <button
+                class="text-white bg-pink-500 active:bg-pink-600 text-xs font-bold uppercase px-4 py-2 rounded shadow hover:shadow-md outline-none focus:outline-none lg:mr-1 lg:mb-0 ml-3 mb-3 ease-linear transition-all duration-150"
+                type="button"
+              >
+                <i class="fas fa-arrow-alt-circle-down"></i> Download
+              </button>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <main>
+      <section
+        class="header relative pt-16 items-center flex h-screen max-h-860-px bg-blueGray-200"
+      >
+        <div class="container mx-auto items-center flex flex-wrap">
+          <div class="w-full md:w-8/12 lg:w-6/12 xl:w-6/12 px-4">
+            <div class="pt-32 sm:pt-0">
+              <h2 class="font-semibold text-4xl text-blueGray-600">
+                Remote Job
+              </h2>
+              <p class="mt-4 text-lg leading-relaxed text-blueGray-500">
+                Browse through a wide range of job listings tailored to your
+                skills and interests. From technology and marketing to customer
+                support and creative roles, we&apos;ve got something for
+                everyone.
+              </p>
+              <div class="mt-12">
+                <a
+                  href="#"
+                  target="_blank"
+                  class="get-started text-white font-bold px-6 py-4 rounded outline-none focus:outline-none mr-1 mb-1 bg-pink-500 active:bg-pink-600 uppercase text-sm shadow hover:shadow-lg ease-linear transition-all duration-150"
+                >
+                  Download
+                </a>
+                <a
+                  href="https://github.com/BILALMRN/remote-jobs.git"
+                  class="github-star ml-1 text-white font-bold px-6 py-4 rounded outline-none focus:outline-none mr-1 mb-1 bg-blueGray-700 active:bg-blueGray-600 uppercase text-sm shadow hover:shadow-lg ease-linear transition-all duration-150"
+                  target="_blank"
+                >
+                  Github
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <img
+        class="absolute top-0 b-auto right-0 pt-16 sm:w-6/12 -mt-48 sm:mt-0 w-10/12 max-h-860-px"
+        src="./assets/img/header.png"
+        alt="header"
+        >
+        <div>
+
+        </div>
+        </section>
+        
+      <section class="pb-20 bg-blueGray-200 -mt-24">
+        <div class="container mx-auto px-4">
+          <div class="flex flex-wrap">
+            <div class="lg:pt-12 pt-6 w-full md:w-4/12 px-4 text-center">
+              <div
+                class="relative flex flex-col min-w-0 break-words bg-white w-full mb-8 shadow-lg rounded-lg"
+              >
+                <div class="px-4 py-5 flex-auto">
+                  <div
+                    class="text-white p-3 text-center inline-flex items-center justify-center w-12 h-12 mb-5 shadow-lg rounded-full bg-red-400"
+                  >
+                    <i class="fas fa-award"></i>
+                  </div>
+                  <h6 class="text-xl font-semibold">No login Account</h6>
+                </div>
+              </div>
+            </div>
+            <div class="w-full md:w-4/12 px-4 text-center">
+              <div
+                class="relative flex flex-col min-w-0 break-words bg-white w-full mb-8 shadow-lg rounded-lg"
+              >
+                <div class="px-4 py-5 flex-auto">
+                  <div
+                    class="text-white p-3 text-center inline-flex items-center justify-center w-12 h-12 mb-5 shadow-lg rounded-full bg-lightBlue-400"
+                  >
+                    <i class="fas fa-retweet"></i>
+                  </div>
+                  <h6 class="text-xl font-semibold">Free</h6>
+                </div>
+              </div>
+            </div>
+            <div class="pt-6 w-full md:w-4/12 px-4 text-center">
+              <div
+                class="relative flex flex-col min-w-0 break-words bg-white w-full mb-8 shadow-lg rounded-lg"
+              >
+                <div class="px-4 py-5 flex-auto">
+                  <div
+                    class="text-white p-3 text-center inline-flex items-center justify-center w-12 h-12 mb-5 shadow-lg rounded-full bg-emerald-400"
+                  >
+                    <i class="fas fa-fingerprint"></i>
+                  </div>
+                  <h6 class="text-xl font-semibold">Open Source</h6>
+                </div>
+              </div>
+            </div>
+          </div>
+            <div
+              class="bottom-auto top-0 left-0 right-0 w-full absolute pointer-events-none  overflow-hidden -mt-20 h-20"
+              style="transform: translateZ(0px)"
+            >
+              <svg
+                class="absolute bottom-0 overflow-hidden"
+                xmlns="http://www.w3.org/2000/svg"
+                preserveAspectRatio="none"
+                version="1.1"
+                viewBox="0 0 2560 100"
+                x="0"
+                y="0"
+              >
+              </svg>
+            </div>
+            <div class="container mx-auto px-4 mt-12">
+              <div class="items-center flex flex-wrap">
+                <div class="w-full md:w-5/12 ml-auto mr-auto px-4">
+                  <div class="md:pr-12">
+                    <div
+                      class="text-pink-600 p-3 text-center inline-flex items-center justify-center w-16 h-16 mb-6 shadow-lg rounded-full bg-pink-300"
+                    >
+                      <i class="fas fa-rocket text-xl"></i>
+                    </div>
+                    <h3 class="text-3xl font-semibold">screenshot-app</h3>
+                    
+                    <ul class="list-none mt-6">
+                      <li class="py-2">
+                        <div class="flex items-center">
+                          <div>
+                            <span
+                              class="text-xs font-semibold inline-block py-1 px-2 uppercase rounded-full text-pink-600 bg-pink-200 mr-3"
+                              ><i class="fas fa-fingerprint"></i
+                            ></span>
+                          </div>
+                          <div>
+                            <h4 class="text-blueGray-500">
+                              Carefully crafted components
+                            </h4>
+                          </div>
+                        </div>
+                      </li>
+                      <li class="py-2">
+                        <div class="flex items-center">
+                          <div>
+                            <span
+                              class="text-xs font-semibold inline-block py-1 px-2 uppercase rounded-full text-pink-600 bg-pink-200 mr-3"
+                              ><i class="fab fa-html5"></i
+                            ></span>
+                          </div>
+                          <div>
+                            <h4 class="text-blueGray-500">Amazing page examples</h4>
+                          </div>
+                        </div>
+                      </li>
+                      <li class="py-2">
+                        <div class="flex items-center">
+                          <div>
+                            <span
+                              class="text-xs font-semibold inline-block py-1 px-2 uppercase rounded-full text-pink-600 bg-pink-200 mr-3"
+                              ><i class="far fa-paper-plane"></i
+                            ></span>
+                          </div>
+                          <div>
+                            <h4 class="text-blueGray-500">Dynamic components</h4>
+                          </div>
+                        </div>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+                <div class="w-full md:w-4/12 ml-auto mr-auto px-4">
+                  <img
+                    alt="..."
+                    class="max-w-full rounded-lg shadow-lg"
+                    src="./assets/img/screenshot-app-1.png"
+                  />
+                </div>
+              </div>
+            </div>
+        </div>
+      </section>
+
+      <section class="relative py-20">
+        <div
+          class="bottom-auto top-0 left-0 right-0 w-full absolute pointer-events-none overflow-hidden -mt-20 h-20"
+          style="transform: translateZ(0px)"
+        >
+          <svg
+            class="absolute bottom-0 overflow-hidden"
+            xmlns="http://www.w3.org/2000/svg"
+            preserveAspectRatio="none"
+            version="1.1"
+            viewBox="0 0 2560 100"
+            x="0"
+            y="0"
+          >
+            <polygon
+              class="text-white fill-current"
+              points="2560 0 2560 100 0 100"
+            ></polygon>
+          </svg>
+        </div>
+        <div class="container mx-auto px-4">
+          <div class="items-center flex flex-wrap">
+            <div class="w-full md:w-4/12 ml-auto mr-auto px-4">
+              <img
+                alt="..."
+                class="max-w-full rounded-lg shadow-lg"
+                src="./assets/img/screenshot-app-2.png"
+              />
+            </div>
+            <div class="w-full md:w-5/12 ml-auto mr-auto px-4">
+              <div class="md:pr-12">
+                <div
+                  class="text-pink-600 p-3 text-center inline-flex items-center justify-center w-16 h-16 mb-6 shadow-lg rounded-full bg-pink-300"
+                >
+                  <i class="fas fa-rocket text-xl"></i>
+                </div>
+                <h3 class="text-3xl font-semibold">screenshot-app</h3>
+                
+                <ul class="list-none mt-6">
+                  <li class="py-2">
+                    <div class="flex items-center">
+                      <div>
+                        <span
+                          class="text-xs font-semibold inline-block py-1 px-2 uppercase rounded-full text-pink-600 bg-pink-200 mr-3"
+                          ><i class="fas fa-fingerprint"></i
+                        ></span>
+                      </div>
+                      <div>
+                        <h4 class="text-blueGray-500">
+                          Carefully crafted components
+                        </h4>
+                      </div>
+                    </div>
+                  </li>
+                  <li class="py-2">
+                    <div class="flex items-center">
+                      <div>
+                        <span
+                          class="text-xs font-semibold inline-block py-1 px-2 uppercase rounded-full text-pink-600 bg-pink-200 mr-3"
+                          ><i class="fab fa-html5"></i
+                        ></span>
+                      </div>
+                      <div>
+                        <h4 class="text-blueGray-500">Amazing page examples</h4>
+                      </div>
+                    </div>
+                  </li>
+                  <li class="py-2">
+                    <div class="flex items-center">
+                      <div>
+                        <span
+                          class="text-xs font-semibold inline-block py-1 px-2 uppercase rounded-full text-pink-600 bg-pink-200 mr-3"
+                          ><i class="far fa-paper-plane"></i
+                        ></span>
+                      </div>
+                      <div>
+                        <h4 class="text-blueGray-500">Dynamic components</h4>
+                      </div>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      
+      <section class="block relative p-8 z-1 bg-blueGray-600" style="margin-top: 100px;">
+        <div class="container mx-auto" style="margin-bottom: 100px;">
+          <div class="justify-center flex flex-wrap">
+            <div class="w-full lg:w-12/12 px-4 -mt-24">
+              <div class="flex flex-wrap">
+                <div class="w-full lg:w-4/12 px-4">
+                  <h5
+                    class="text-4xl text-white font-semibold pb-4 text-center"
+                  >
+                    Login Page
+                  </h5>
+                  <a href="./pages/auth/login.html">
+                    <div
+                      class="hover:-mt-4 relative flex flex-col min-w-0 break-words bg-white w-full mb-6 shadow-lg rounded-lg ease-linear transition-all duration-150"
+                    >
+                      <img
+                        alt="..."
+                        class="align-middle border-none max-w-full h-auto rounded-lg"
+                        src="./assets/img/login.jpg"
+                      />
+                    </div>
+                  </a>
+                </div>
+
+                <div class="w-full lg:w-4/12 px-4">
+                  <h5
+                    class="text-4xl text-white font-semibold pb-4 text-center"
+                  >
+                    Profile Page
+                  </h5>
+                  <a href="./pages/profile.html">
+                    <div
+                      class="hover:-mt-4 relative flex flex-col min-w-0 break-words bg-white w-full mb-6 shadow-lg rounded-lg ease-linear transition-all duration-150"
+                    >
+                      <img
+                        alt="..."
+                        class="align-middle border-none max-w-full h-auto rounded-lg"
+                        src="./assets/img/profile.jpg"
+                      />
+                    </div>
+                  </a>
+                </div>
+
+                <div class="w-full lg:w-4/12 px-4">
+                  <h5
+                    class="text-4xl text-white font-semibold pb-4 text-center"
+                  >
+                    Landing Page
+                  </h5>
+                  <a href="./pages/landing.html">
+                    <div
+                      class="hover:-mt-4 relative flex flex-col min-w-0 break-words bg-white w-full mb-6 shadow-lg rounded-lg ease-linear transition-all duration-150"
+                    >
+                      <img
+                        alt="..."
+                        class="align-middle border-none max-w-full h-auto rounded-lg"
+                        src="./assets/img/landing.jpg"
+                      />
+                    </div>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer class="relative bg-blueGray-200 pt-8 pb-6">
+      <div
+        class="bottom-auto top-0 left-0 right-0 w-full absolute pointer-events-none overflow-hidden -mt-20 h-20"
+        style="transform: translateZ(0px)"
+      >
+        <svg
+          class="absolute bottom-0 overflow-hidden"
+          xmlns="http://www.w3.org/2000/svg"
+          preserveAspectRatio="none"
+          version="1.1"
+          viewBox="0 0 2560 100"
+          x="0"
+          y="0"
+        >
+          <polygon
+            class="text-blueGray-200 fill-current"
+            points="2560 0 2560 100 0 100"
+          ></polygon>
+        </svg>
+      </div>
+      <div class="container mx-auto px-4">
+        <div class="flex flex-wrap text-center lg:text-left">
+          <div class="w-full lg:w-6/12 px-4">
+            <h4 class="text-3xl font-semibold">Let's keep in touch!</h4>
+            <h5 class="text-lg mt-0 mb-2 text-blueGray-600">
+              Browse through a wide range of job listings tailored to your skills and interests. 
+              From technology and marketing to customer support and creative roles, 
+              we&apos;ve got something for everyone.
+            </h5>
+            <div class="mt-6 lg:mb-0 mb-6">
+              <a
+                class="bg-white text-blueGray-800 shadow-lg font-normal h-10 w-10 items-center justify-center align-center rounded-full outline-none focus:outline-none mr-2"
+                href="https://github.com/BILALMRN/remote-jobs.git"
+              >
+                <i class="fab fa-github"></i>
+            </a>
+            </div>
+          </div>
+          <div class="w-full lg:w-6/12 px-4">
+            <div class="flex flex-wrap items-top mb-6">
+              <div class="w-full lg:w-4/12 px-4 ml-auto">
+                <span
+                  class="block uppercase text-blueGray-500 text-sm font-semibold mb-2"
+                  >Useful Links</span
+                >
+                <ul class="list-unstyled">
+                  <li>
+                    <a
+                      class="text-blueGray-600 hover:text-blueGray-800 font-semibold block pb-2 text-sm"
+                      href="https://github.com/BILALMRN/remote-jobs.git"
+                      >About Us</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      class="text-blueGray-600 hover:text-blueGray-800 font-semibold block pb-2 text-sm"
+                      href="https://github.com/BILALMRN/remote-jobs.git"
+                      >Github</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      class="text-blueGray-600 hover:text-blueGray-800 font-semibold block pb-2 text-sm"
+                      href="https://bilalmrn.github.io/BILALMRN/"
+                      >other Products</a
+                    >
+                  </li>
+                </ul>
+              </div>
+              <div class="w-full lg:w-4/12 px-4">
+                <span
+                  class="block uppercase text-blueGray-500 text-sm font-semibold mb-2"
+                  >Other Resources</span
+                >
+                <ul class="list-unstyled">
+                  <li>
+                    <a
+                      class="text-blueGray-600 hover:text-blueGray-800 font-semibold block pb-2 text-sm"
+                      href="https://github.com/BILALMRN/remote-jobs.git"
+                      >MIT License</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      class="text-blueGray-600 hover:text-blueGray-800 font-semibold block pb-2 text-sm"
+                      href="https://github.com/BILALMRN/remote-jobs.git"
+                      >Terms &amp; Conditions</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      class="text-blueGray-600 hover:text-blueGray-800 font-semibold block pb-2 text-sm"
+                      href="https://github.com/BILALMRN/remote-jobs.git"
+                      >Privacy Policy</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      class="text-blueGray-600 hover:text-blueGray-800 font-semibold block pb-2 text-sm"
+                      href="https://bilalmrn.github.io/BILALMRN/"
+                      >Contact Us</a
+                    >
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+        <hr class="my-6 border-blueGray-300" />
+        <div
+          class="flex flex-wrap items-center md:justify-between justify-center"
+        >
+          <div class="w-full md:w-4/12 px-4 mx-auto text-center">
+            <div class="text-sm text-blueGray-500 font-semibold py-1">
+              Copyright © <span id="get-current-year"></span> 
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </body>
+  <script src="https://unpkg.com/@popperjs/core@2/dist/umd/popper.js"></script>
+  <script>
+    /* Make dynamic date appear */
+    (function () {
+      if (document.getElementById("get-current-year")) {
+        document.getElementById("get-current-year").innerHTML =
+          new Date().getFullYear();
+      }
+    })();
+    /* Function for opning navbar on mobile */
+    function toggleNavbar(collapseID) {
+      document.getElementById(collapseID).classList.toggle("hidden");
+      document.getElementById(collapseID).classList.toggle("block");
+    }
+    /* Function for dropdowns */
+    function openDropdown(event, dropdownID) {
+      let element = event.target;
+      while (element.nodeName !== "A") {
+        element = element.parentNode;
+      }
+      Popper.createPopper(element, document.getElementById(dropdownID), {
+        placement: "bottom-start",
+      });
+      document.getElementById(dropdownID).classList.toggle("hidden");
+      document.getElementById(dropdownID).classList.toggle("block");
+    }
+  </script>
+</html>
